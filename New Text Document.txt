@@ -50,7 +50,8 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   kon1 = 0;
-  
+
+  /* PRVI DEO */
   /*while(!Serial.available());
   delay(20);
   duzina = Serial.available();
@@ -59,7 +60,7 @@ void loop() {
   Serial.print("Unet karakter: ");
   Serial.println(karakter);*/
 
-
+  /* DRUGI DEO */
   if(ocitajTaster() == "SELECT" && kon == 0) { 
     kon = 1;
     if(zavrseno == 1){
@@ -97,7 +98,9 @@ void loop() {
   }else if(ocitajTaster() == "NISTA") {
     kon = 0;
   }
-  
+
+
+  /* OVO NE DIRAS */
   if(karakter[0] != 0){
     for(int i = 0; i < reci[br_reci].length(); i++){
       if(reci[br_reci][i] == karakter[0]){
